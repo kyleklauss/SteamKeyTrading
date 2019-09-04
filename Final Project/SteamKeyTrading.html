@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head color = "blue">
+        <script src="./jquery-3.1.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+        <script src="./SteamKeyTrading.js"></script>
+        Steam Key Trading Using Smart Contracts
+    </head>
+
+    <p>
+        Insert Account Number
+        <input text = "text", id = "account" />
+        <button onclick = "setAccountNumber">Submit</button>
+    </p>
+
+    <body>
+        <h1>Trading Table</h1>
+        <p>
+            Search for a Game
+            <input text = "text", id = "keyword" />
+            <button onclick = "searchGames()">Search</button>
+        </p>
+        
+        <table border = 1 id = "trades">
+
+            <tr>
+                <td>Looking For</td>
+                <td>Can Trade</td>
+            </tr>
+
+        </table>
+        
+        <div>
+            Enter a game you want:
+            <input type = "text" id = "want" value = "Battletoads"/>
+            Enter a game you have:
+            <input type = "text" id = "has" value = "Battletoads"/>
+            <button onclick = "setGames()">Post Trade</button>
+        </div>
+        <div>
+            <p>
+                Submit Hash for Game
+                <input text = "text", id = "hash"/>
+                <button onclick = "submitHash()">Submit</button>
+            </p>
+        </div>
+        <div>
+            <p>
+                After Hash has been verified, select if the validation succeeded or failed
+                <button onclick = "sendTrue()">Success</button>
+                <button onclick = "sendFalse()">Failure</button>
+            </p>
+        </div>
+        <div>
+            <p>
+                After Hash has been verified, submit the key
+                <input text = "text", id = "key"/>
+                <button onclick = "submitKey()">Submit</button>
+            </p>
+        </div>
+
+        
+    </body>
+    
+</html>
